@@ -7,6 +7,12 @@ return {
         sidebars = "transparent",
         floats = "transparent",
       },
+      on_highlights = function(hl, c)
+        hl.Visual = { bg = "#2d2d2e" }
+        hl.CursorLine = { bg = "NONE" }
+        hl.CursorLineNr = { fg = c.orange, bg = "NONE", bold = true }
+        hl.LspInlayHint = { bg = "NONE", fg = "#555555" }
+      end,
     },
   },
 
@@ -63,6 +69,9 @@ return {
 
   {
     "APZelos/blamer.nvim",
+    init = function()
+      vim.g.blamer_enabled = 1
+    end,
   },
   {
     "folke/todo-comments.nvim",

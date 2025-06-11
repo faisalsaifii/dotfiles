@@ -4,5 +4,6 @@
 --
 
 vim.g.lazyvim_check_order = false
-vim.opt.cursorline = false
+vim.opt.cursorline = true
 vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ff5f87", bold = true })
+vim.g.blamer_enabled = 1
